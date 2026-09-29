@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quantumsense"
+version = "0.1.0"
+description = "Physics-first toolkit for GHz quantum-acoustic phonon detector design."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "Athul Prem"}]
+dependencies = [
+  "numpy>=1.24",
+  "matplotlib>=3.7"
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
