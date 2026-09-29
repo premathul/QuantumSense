@@ -24,7 +24,7 @@ The proposed detector contains five physical elements:
 
 Conceptually:
 
-\`\`\`text
+```text
 incoming acoustic pulse
         |
         v
@@ -51,7 +51,7 @@ incoming acoustic pulse
                                   |
                                   v
                            detection event
-\`\`\`
+```
 
 A first laboratory implementation should be understood as a **cryogenic device**, not a room-temperature handheld sensor.
 
@@ -227,7 +227,7 @@ The code reports:
 
 ## 7. Repository layout
 
-\`\`\`text
+```text
 QuantumSense/
 ├── README.md
 ├── pyproject.toml
@@ -247,7 +247,7 @@ QuantumSense/
     ├── PHYSICS.md
     ├── DEVICE_CONCEPT.md
     └── EXPERIMENTAL_ROADMAP.md
-\`\`\`
+```
 
 ---
 
@@ -255,26 +255,26 @@ QuantumSense/
 
 Requires Python 3.10 or newer.
 
-\`\`\`bash
+```bash
 git clone https://github.com/premathul/QuantumSense.git
 cd QuantumSense
 python -m venv .venv
 source .venv/bin/activate
 pip install -e .
-\`\`\`
+```
 
 For development:
 
-\`\`\`bash
+```bash
 pip install -e ".[dev]"
 pytest
-\`\`\`
+```
 
 ---
 
 ## 9. Quick start
 
-\`\`\`python
+```python
 from quantumsense import PhononMode, PhononDetector
 
 mode = PhononMode(
@@ -292,13 +292,13 @@ detector = PhononDetector(
 
 print(mode.summary())
 print(detector.summary())
-\`\`\`
+```
 
 Or run
 
-\`\`\`bash
+```bash
 python examples/ghz_phonon_detector.py
-\`\`\`
+```
 
 ---
 
